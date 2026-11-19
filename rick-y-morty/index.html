@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Galería de personajes de Rick y Morty.">
+    <title>Rick y Morty | Selección de personajes</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#inicio" class="logo">
+                RICK <span>&</span> MORTY
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#personajes">Personajes</a></li>
+                <li><a href="#nosotros">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="subtitle">BIENVENIDO AL MULTIVERSO</p>
+
+                <h1>RICK Y <span>MORTY</span></h1>
+
+                <p class="hero-description">
+                    Explora el universo de Rick y Morty y conoce algunos
+                    de los personajes más destacados de esta divertida
+                    aventura interdimensional.
+                </p>
+
+                <a href="#personajes" class="hero-button">
+                    Explorar personajes
+                </a>
+            </div>
+        </section>
+
+        <!-- GALERÍA DE PERSONAJES -->
+        <section class="characters-section" id="personajes">
+
+            <div class="section-heading">
+                <p class="subtitle">CONOCE EL MULTIVERSO</p>
+
+                <h2>Selección de <span>personajes</span></h2>
+
+                <p>
+                    Descubre las características y personalidades
+                    de nuestros protagonistas.
+                </p>
+            </div>
+
+            <div class="characters-grid">
+
+                <!-- RICK SÁNCHEZ -->
+                <article class="character-card">
+                    <div class="image-container">
+                        <img
+                            src="images/rick.jpg"
+                            alt="Rick Sánchez"
+                            loading="lazy"
+                        >
+                        <span class="character-number">01</span>
+                    </div>
+
+                    <div class="card-content">
+                        <span class="character-category">CIENTÍFICO</span>
+
+                        <h3>Rick Sánchez</h3>
+
+                        <p>
+                            Un científico extremadamente inteligente,
+                            excéntrico y aventurero que viaja entre
+                            diferentes dimensiones.
+                        </p>
+
+                        <button
+                            class="info-button"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            Más información
+                        </button>
+
+                        <div class="extra-info" hidden>
+                            <p>
+                                Rick es conocido por sus inventos
+                                tecnológicos, su portal interdimensional
+                                y su personalidad rebelde. Es el abuelo
+                                de Morty y Summer.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MORTY SMITH -->
+                <article class="character-card">
+                    <div class="image-container">
+                        <img
+                            src="images/morty.jpg"
+                            alt="Morty Smith"
+                            loading="lazy"
+                        >
+                        <span class="character-number">02</span>
+                    </div>
+
+                    <div class="card-content">
+                        <span class="character-category">AVENTURERO</span>
+
+                        <h3>Morty Smith</h3>
+
+                        <p>
+                            Un adolescente de buen corazón que acompaña
+                            a su abuelo Rick en peligrosas aventuras
+                            por el universo.
+                        </p>
+
+                        <button
+                            class="info-button"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            Más información
+                        </button>
+
+                        <div class="extra-info" hidden>
+                            <p>
+                                Morty suele ser nervioso y preocupado,
+                                pero demuestra valentía y aprende
+                                constantemente durante sus aventuras
+                                interdimensionales.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SUMMER SMITH -->
+                <article class="character-card">
+                    <div class="image-container">
+                        <img
+                            src="images/summer.jpg"
+                            alt="Summer Smith"
+                            loading="lazy"
+                        >
+                        <span class="character-number">03</span>
+                    </div>
+
+                    <div class="card-content">
+                        <span class="character-category">INTELIGENTE</span>
+
+                        <h3>Summer Smith</h3>
+
+                        <p>
+                            La hermana mayor de Morty. Es una joven
+                            independiente, decidida y con una
+                            personalidad muy fuerte.
+                        </p>
+
+                        <button
+                            class="info-button"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            Más información
+                        </button>
+
+                        <div class="extra-info" hidden>
+                            <p>
+                                Summer participa en distintas aventuras
+                                con Rick y Morty. Se caracteriza por
+                                su carácter decidido y su capacidad
+                                para enfrentar situaciones difíciles.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SR. PANTALONES DE POPÓ -->
+                <article class="character-card">
+                    <div class="image-container">
+                        <img
+                            src="images/pantalones.jpg"
+                            alt="Sr. Pantalones de Popó"
+                            loading="lazy"
+                        >
+                        <span class="character-number">04</span>
+                    </div>
+
+                    <div class="card-content">
+                        <span class="character-category">PERSONAJE</span>
+
+                        <h3>Sr. Pantalones de Popó</h3>
+
+                        <p>
+                            Un personaje peculiar y carismático
+                            que forma parte del particular universo
+                            de Rick y Morty.
+                        </p>
+
+                        <button
+                            class="info-button"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            Más información
+                        </button>
+
+                        <div class="extra-info" hidden>
+                            <p>
+                                El Sr. Pantalones de Popó es recordado
+                                por su apariencia particular, su actitud
+                                amistosa y sus apariciones en momentos
+                                inesperados de la serie.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ACERCA DEL PROYECTO -->
+        <section class="about-section" id="nosotros">
+            <div class="about-content">
+                <p class="subtitle">NUESTRO PROYECTO</p>
+
+                <h2>Explorando el <span>multiverso</span></h2>
+
+                <p>
+                    Esta página web fue creada como un proyecto
+                    de desarrollo frontend utilizando HTML, CSS
+                    y JavaScript. Su objetivo es presentar una
+                    selección de personajes de Rick y Morty
+                    mediante una galería visual e interactiva.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>
+            © 2026 Rick y Morty - Selección de personajes.
+        </p>
+
+        <p>
+            Proyecto académico desarrollado con HTML, CSS y JavaScript.
+        </p>
+    </footer>
+
+</body>
+</html>

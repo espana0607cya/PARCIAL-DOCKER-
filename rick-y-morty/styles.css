@@ -1,0 +1,419 @@
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #101018;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+:root {
+    --green: #a3e635;
+    --purple: #8b5cf6;
+    --dark: #101018;
+    --card: #1c1c29;
+    --text: #d1d5db;
+}
+
+/* =====================================
+   BARRA DE NAVEGACIÓN
+===================================== */
+
+.header {
+    width: 100%;
+    background-color: rgba(16, 16, 24, 0.96);
+    border-bottom: 1px solid rgba(163, 230, 53, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+/* =====================================
+   PORTADA PRINCIPAL
+===================================== */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(139, 92, 246, 0.22),
+            transparent 65%
+        ),
+        linear-gradient(135deg, #101018, #19192a);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.subtitle {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.hero h1 span {
+    color: var(--green);
+    text-shadow: 0 0 20px rgba(163, 230, 53, 0.4);
+}
+
+.hero-description {
+    color: var(--text);
+    font-size: 17px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: var(--green);
+    color: #101018;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 13px 28px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background-color: var(--purple);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   SECCIÓN DE PERSONAJES
+===================================== */
+
+.characters-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 30px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2,
+.about-content h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    margin-bottom: 15px;
+}
+
+.section-heading h2 span,
+.about-content h2 span {
+    color: var(--green);
+}
+
+.section-heading > p:last-child {
+    color: var(--text);
+    font-size: 16px;
+}
+
+/* =====================================
+   CUADRÍCULA DE TARJETAS
+===================================== */
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.character-card {
+    background-color: var(--card);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.character-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--green);
+    box-shadow: 0 10px 30px rgba(163, 230, 53, 0.12);
+}
+
+/* =====================================
+   IMÁGENES
+===================================== */
+
+.image-container {
+    width: 100%;
+    height: 270px;
+    position: relative;
+    background-color: #29293b;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.character-card:hover .image-container img {
+    transform: scale(1.06);
+}
+
+.character-number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--green);
+    color: #101018;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* =====================================
+   INFORMACIÓN DE LAS TARJETAS
+===================================== */
+
+.card-content {
+    padding: 22px;
+}
+
+.character-category {
+    color: var(--purple);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.card-content h3 {
+    color: var(--green);
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.card-content > p {
+    color: var(--text);
+    font-size: 14px;
+    min-height: 105px;
+}
+
+/* =====================================
+   BOTÓN DE INFORMACIÓN
+===================================== */
+
+.info-button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--purple);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.info-button:hover {
+    background-color: var(--green);
+    color: #101018;
+}
+
+.info-button:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+.extra-info {
+    margin-top: 15px;
+    padding: 12px;
+    border-left: 3px solid var(--green);
+    background-color: #252538;
+    border-radius: 5px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.extra-info[hidden] {
+    display: none;
+}
+
+/* =====================================
+   SECCIÓN ACERCA DEL PROYECTO
+===================================== */
+
+.about-section {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139, 92, 246, 0.16),
+            rgba(163, 230, 53, 0.08)
+        ),
+        #191925;
+
+    padding: 75px 25px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.about-content > p:last-child {
+    color: var(--text);
+    font-size: 16px;
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+.footer {
+    background-color: #0b0b11;
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(163, 230, 53, 0.2);
+}
+
+.footer p {
+    color: #9ca3af;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+/* =====================================
+   DISEÑO RESPONSIVE
+===================================== */
+
+/* TABLETAS */
+
+@media (max-width: 1000px) {
+
+    .characters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .characters-section {
+        padding: 60px 18px;
+    }
+
+    .characters-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .image-container {
+        height: 320px;
+    }
+
+    .card-content > p {
+        min-height: auto;
+    }
+
+    .about-section {
+        padding: 55px 20px;
+    }
+
+}
